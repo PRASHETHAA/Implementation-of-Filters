@@ -13,9 +13,9 @@ Import the necessary modules.
 
 ### Step2
 </br>
-For performing smoothing operation on a image.\
+For performing smoothing operation on a image.
 
-*Average filter\
+### Average filter\
 avg_kernel=np.ones((13,13),np.float32)/169
 average_filter_image=cv2.filter2D(image,-1,avg_kernel)
 
