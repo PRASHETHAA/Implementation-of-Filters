@@ -1,172 +1,143 @@
 # Implementation-of-Filters
-## Aim:
+## AIM:
 To implement filters for smoothing and sharpening the images in the spatial domain.
-
-## Software Required:
+## SOFTWARE REQUIRED:
 Anaconda - Python 3.7
+## ALGORITHM:
+### Step 1:
+Import the necessary modules. 
+### Step 2:
+For performing smoothing operation on a image. 
+- Average filter
+python
+kernel=np.ones((11,11),np.float32)/121
+image3=cv2.filter2D(image2,-1,kernel)
 
-## Algorithm:
-### Step1
-</br>
-Import the necessary modules.
-</br> 
+- Weighted average filter
+python
+kernel1=np.array([[1,2,1],[2,4,2],[1,2,1]])/16
+image3=cv2.filter2D(image2,-1,kernel1)
 
-### Step2
-</br>
-For performing smoothing operation on a image.
+- Gaussian Blur 
+python
+gaussian_blur=cv2.GaussianBlur(image2,(33,33),0,0)
 
-### Average filter\
-avg_kernel=np.ones((13,13),np.float32)/169
-average_filter_image=cv2.filter2D(image,-1,avg_kernel)
+- Median filter
+python
+median=cv2.medianBlur(image2,13)
 
-*Weighted average filter\
-wt_avg_kernel=np.array([[1,2,1],[2,4,2],[1,2,1]])/16
-wt_average_filter_image=cv2.filter2D(image,-1,wt_avg_kernel)
-
-*Gaussian Blur\
-gaussian_blur=cv2.GaussianBlur(image,(31,31),0,0)
-
-*Median filter\
-median_blur=cv2.medianBlur(image,
-</br> 
-
-### Step3
-</br>
+### Step 3:
 For performing sharpening on a image.
+- Laplacian Kernel
+python
+kernel2=np.array([[-1,-1,-1],[2,-2,1],[2,1,-1]])
+image3=cv2.filter2D(image2,-1,kernel2)
 
-*Laplacian Kernel\
-lap_kernel=np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]])
-lap_image=cv2.filter2D(image,-1,lap_kernel)
+- Laplacian Operator
+python
+laplacian=cv2.Laplacian(image2,cv2.CV_64F)
 
-*Laplacian Operator\
-Lap_sharp=cv2.Laplacian(image,cv2.CV_64F)
-</br> 
-
-### Step4
-</br>
+### Step 4:
 Display all the images with their respective filters.
-</br> 
+## PROGRAM:
+python
+# Developed By   : A.DIVYA MEENAKSHI 
+# Register Number: 212220230014
 
-## Program:
-### Developed By   :PRASHETHAA R
-### Register Number:212220230036
-</br>
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+image1=cv2.imread("nat.jpg")
+image2=cv2.cvtColor(image1,cv2.COLOR_BGR2RGB)
 
 ### 1. Smoothing Filters
-
 i) Using Averaging Filter
-```Python
-average_kernel=np.ones((13,13),np.float32)/169
-average_filter_image=cv2.filter2D(image,-1,avg_kernel)
-plt.figure(figsize=(10,10))
+Python
+kernel=np.ones((11,11),np.float32)/121
+image3=cv2.filter2D(image2,-1,kernel)
+plt.figure(figsize=(8,8))
 plt.subplot(1,2,1)
+plt.imshow(image2)
+plt.title("Original Image")
 plt.axis("off")
-plt.title('Original image')
-plt.imshow(image)
 plt.subplot(1,2,2)
+plt.imshow(image3)
+plt.title("Average Filter Image")
 plt.axis("off")
-plt.title('Average Filter image')
-plt.imshow(average_filter_image)
 plt.show()
 
-
-
-```
 ii) Using Weighted Averaging Filter
-```Python
-weight_average_kernel=np.array([[1,2,1],[2,4,2],[1,2,1]])/16
-weight_average_filter_image=cv2.filter2D(image,-1,weight_average_kernel)
-plt.figure(figsize=(10,10))
+Python
+kernel1=np.array([[1,2,1],[2,4,2],[1,2,1]])/16
+image3=cv2.filter2D(image2,-1,kernel1)
+plt.figure(figsize=(8,8))
 plt.subplot(1,2,1)
+plt.imshow(image2)
+plt.title("Original Image")
 plt.axis("off")
-plt.title('Original image')
-plt.imshow(image[30:200,50:200])
 plt.subplot(1,2,2)
+plt.imshow(image3)
+plt.title("Weighted Average Filter Image")
 plt.axis("off")
-plt.title('Weighted average Filter image')
-plt.imshow(weight_average_filter_image[30:200,50:200])
 plt.show()
 
-
-
-
-```
 iii) Using Gaussian Filter
-```Python
-gaussian_blur=cv2.GaussianBlur(image,(31,31),0,0)
-plt.figure(figsize=(10,10))
+Python
+gaussian_blur=cv2.GaussianBlur(image2,(33,33),0,0)
+plt.figure(figsize=(8,8))
 plt.subplot(1,2,1)
+plt.imshow(image2)
+plt.title("Original Image")
 plt.axis("off")
-plt.title('Original image')
-plt.imshow(image)
 plt.subplot(1,2,2)
-plt.axis("off")
-plt.title('Gaussian Filter image')
 plt.imshow(gaussian_blur)
+plt.title("Gaussian Blur")
+plt.axis("off")
 plt.show()
-
-
-
-
-```
 
 iv) Using Median Filter
-```Python
-median_blur=cv2.medianBlur(image,11)
-plt.figure(figsize=(10,10))
+Python
+median=cv2.medianBlur(image2,13)
+plt.figure(figsize=(8,8))
 plt.subplot(1,2,1)
+plt.imshow(image2)
+plt.title("Original Image")
 plt.axis("off")
-plt.title('Original image')
-plt.imshow(image)
 plt.subplot(1,2,2)
+plt.imshow(gaussian_blur)
+plt.title("Median Blur")
 plt.axis("off")
-plt.title('Median Filter image')
-plt.imshow(median_blur)
 plt.show()
-
-
-
-
-```
 
 ### 2. Sharpening Filters
 i) Using Laplacian Kernal
-```Python
-laplacian_kernel=np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]])
-laplacian_image=cv2.filter2D(image,-1,laplacian_kernel)
-plt.figure(figsize=(10,10))
+Python
+kernel2=np.array([[-1,-1,-1],[2,-2,1],[2,1,-1]])
+image3=cv2.filter2D(image2,-1,kernel2)
+plt.figure(figsize=(8,8))
 plt.subplot(1,2,1)
+plt.imshow(image2)
+plt.title("Original Image")
 plt.axis("off")
-plt.title('Original image')
-plt.imshow(image)
 plt.subplot(1,2,2)
+plt.imshow(image3)
+plt.title("Laplacian Kernel")
 plt.axis("off")
-plt.title('Laplacian Kernel Filter image')
-plt.imshow(laplacian_image)
 plt.show()
 
-
-
-
-```
 ii) Using Laplacian Operator
-```Python
-Laplacian_sharp=cv2.Laplacian(image,cv2.CV_64F)
-plt.figure(figsize=(10,10))
+Python
+laplacian=cv2.Laplacian(image2,cv2.CV_64F)
+plt.figure(figsize=(8,8))
 plt.subplot(1,2,1)
+plt.imshow(image2)
+plt.title("Original Image")
 plt.axis("off")
-plt.title('Original image')
-plt.imshow(image)
 plt.subplot(1,2,2)
+plt.imshow(laplacian)
+plt.title("Laplacian Operator")
 plt.axis("off")
-plt.title('Laplacian Operator Filter image')
-plt.imshow(Laplacian_sharp)
 plt.show()
-
-
-
-
-```
 
 ## OUTPUT:
 ### 1. Smoothing Filters
