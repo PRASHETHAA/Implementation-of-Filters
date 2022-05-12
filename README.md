@@ -55,8 +55,8 @@ Display all the images with their respective filters.
 
 
 ## Program:
-### Developed By   : P.SUGANYA
-### Register Number: 212220230049
+### Developed By   : PRASHETHAA R
+### Register Number: 212220230036
 </br>
 
 ### 1. Smoothing Filters
