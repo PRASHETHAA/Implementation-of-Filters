@@ -161,7 +161,7 @@ plt.show()
 </br>
 
 i) Using Averaging Filter
-![o1](https://user-images.githubusercontent.com/77089743/167561129-fe58cce5-df70-4afa-a43e-23e96a094ba6.PNG)
+![avg](https://user-images.githubusercontent.com/75234942/168730788-5a020475-e84a-405a-9340-76d35d6cd11c.jpeg)
 
 </br>
 </br>
@@ -170,17 +170,19 @@ i) Using Averaging Filter
 </br>
 
 ii) Using Weighted Averaging Filter
-![o2](https://user-images.githubusercontent.com/77089743/167561199-bf65ccf1-842d-4d8f-b1a7-3539184e6d25.PNG)
+![weightedavg](https://user-images.githubusercontent.com/75234942/168730862-b534038b-8ad0-4bf9-807b-d83e734d671b.jpeg)
 
 
+
 </br>
 </br>
 </br>
 </br>
 </br>
 
-iii) Using Weighted Averaging Filter
-![o3](https://user-images.githubusercontent.com/77089743/167561237-f0cb1bd8-2357-48a5-8893-13b29d0bc438.PNG)
+iii) Using Gaussian Filter
+![gauss](https://user-images.githubusercontent.com/75234942/168730966-77634123-67ca-4d20-9bb0-29ed639102c7.jpeg)
+
 
 
 </br>
@@ -190,7 +192,9 @@ iii) Using Weighted Averaging Filter
 </br>
 
 iv) Using Median Filter
-![o4](https://user-images.githubusercontent.com/77089743/167561267-1471118a-dfb8-43e9-8a4f-54e80d94893f.PNG)
+![median](https://user-images.githubusercontent.com/75234942/168731031-4ccf64be-0346-47f3-848e-a274fc03d37d.jpeg)
+
+
 
 </br>
 </br>
@@ -202,7 +206,8 @@ iv) Using Median Filter
 </br>
 
 i) Using Laplacian Kernal
-![o5](https://user-images.githubusercontent.com/77089743/167561287-7a36663c-109b-40e1-8313-2746d21bac32.PNG)
+![lapkernel](https://user-images.githubusercontent.com/75234942/168731057-e9740921-331e-46b7-a7f6-9158a66c29e7.jpeg)
+
 
 
 </br>
@@ -212,7 +217,9 @@ i) Using Laplacian Kernal
 </br>
 
 ii) Using Laplacian Operator
-![o6](https://user-images.githubusercontent.com/77089743/167561322-06c1abe6-a3c0-45f3-ab7a-62b4bab42d56.PNG)
+![lapoperator](https://user-images.githubusercontent.com/75234942/168731157-e03d55b5-a9ad-47d2-8979-a821304d6f90.jpeg)
+
+
 
 </br>
 </br>
