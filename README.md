@@ -161,6 +161,7 @@ plt.show()
 </br>
 
 i) Using Averaging Filter
+
 ![avg](https://user-images.githubusercontent.com/75234942/168730788-5a020475-e84a-405a-9340-76d35d6cd11c.jpeg)
 
 </br>
@@ -170,6 +171,7 @@ i) Using Averaging Filter
 </br>
 
 ii) Using Weighted Averaging Filter
+
 ![weightedavg](https://user-images.githubusercontent.com/75234942/168730862-b534038b-8ad0-4bf9-807b-d83e734d671b.jpeg)
 
 
@@ -181,6 +183,7 @@ ii) Using Weighted Averaging Filter
 </br>
 
 iii) Using Gaussian Filter
+
 ![gauss](https://user-images.githubusercontent.com/75234942/168730966-77634123-67ca-4d20-9bb0-29ed639102c7.jpeg)
 
 
@@ -206,6 +209,7 @@ iv) Using Median Filter
 </br>
 
 i) Using Laplacian Kernal
+
 ![lapkernel](https://user-images.githubusercontent.com/75234942/168731057-e9740921-331e-46b7-a7f6-9158a66c29e7.jpeg)
 
 
@@ -217,6 +221,7 @@ i) Using Laplacian Kernal
 </br>
 
 ii) Using Laplacian Operator
+
 ![lapoperator](https://user-images.githubusercontent.com/75234942/168731157-e03d55b5-a9ad-47d2-8979-a821304d6f90.jpeg)
 
 
