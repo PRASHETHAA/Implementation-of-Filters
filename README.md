@@ -229,6 +229,11 @@ iv) Using Median Filter
 </br>
 </br>
 </br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 ### 2. Sharpening Filters
 </br>
