@@ -194,6 +194,14 @@ ii) Using Weighted Averaging Filter
 </br>
 </br>
 </br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 
 iii) Using Gaussian Filter
 
