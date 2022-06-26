@@ -156,8 +156,9 @@ plt.title('Laplacian Operator Filter image')
 plt.imshow(Laplacian_sharp)
 plt.show()
 ```
-
-
+</br>
+</br>
+</br>
 ## OUTPUT:
 ### 1. Smoothing Filters
 </br>
